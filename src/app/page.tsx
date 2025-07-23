@@ -56,7 +56,7 @@ export default function ScoreTable() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-100 via-yellow-100 to-green-100 p-6 flex flex-col items-center font-sans">
       <h1 className="mb-8 text-5xl font-extrabold text-center text-pink-700 drop-shadow-lg select-none">
-        🎉 Instagram Quiz Scoreboard 🎉
+        🎉 Instagram Quiz Grader 🎉
       </h1>
 
       <div className="w-full max-w-6xl overflow-x-auto rounded-xl shadow-xl bg-white border-4 border-pink-300">
