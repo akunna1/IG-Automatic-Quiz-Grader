@@ -1,7 +1,3 @@
-Sure! Here’s a clean, friendly, and clear README file tailored to your Instagram Quiz Scoreboard project with the Cocomelon-inspired theme:
-
----
-
 # Instagram Quiz Scoreboard 🎉
 
 A colorful and interactive scoreboard built with React and Next.js for tracking my Instagram quiz scores. Designed with a playful Cocomelon-inspired theme to keep it fun and engaging while being fully functional and responsive.
