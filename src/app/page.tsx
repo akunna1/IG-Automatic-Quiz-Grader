@@ -54,82 +54,82 @@ export default function ScoreTable() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-cyan-200 via-green-200 to-yellow-200 p-4 flex flex-col items-center">
-      <h1 className="text-4xl font-extrabold text-red-600 mb-6 select-none drop-shadow-lg">
-        Instagram Quiz Scoreboard
+    <div className="min-h-screen bg-gradient-to-b from-pink-100 via-yellow-100 to-green-100 p-6 flex flex-col items-center font-sans">
+      <h1 className="mb-8 text-5xl font-extrabold text-center text-pink-700 drop-shadow-lg select-none">
+        🎉 Instagram Quiz Scoreboard 🎉
       </h1>
 
-      <div className="w-full max-w-5xl overflow-x-auto rounded-lg shadow-lg bg-white">
-        <table className="w-full min-w-[600px] md:min-w-full table-auto border-collapse">
-          <thead className="bg-green-300 text-gray-800 uppercase text-sm font-bold select-none">
+      <div className="w-full max-w-6xl overflow-x-auto rounded-xl shadow-xl bg-white border-4 border-pink-300">
+        <table className="w-full min-w-[650px] table-auto border-collapse rounded-xl overflow-hidden">
+          <thead className="bg-yellow-300 text-pink-700 uppercase text-base md:text-lg font-bold">
             <tr>
-              <th className="py-3 px-4 border border-green-400 text-left">Name</th>
-              <th className="py-3 px-4 border border-green-400 text-center">Red</th>
-              <th className="py-3 px-4 border border-green-400 text-center">Blue</th>
-              <th className="py-3 px-4 border border-green-400 text-center">Difference (Blue - Red)</th>
-              <th className="py-3 px-4 border border-green-400 text-center">Reset</th>
+              <th className="py-4 px-6 border-r-2 border-pink-300 text-left">Name</th>
+              <th className="py-4 px-6 border-r-2 border-pink-300 text-center">Red</th>
+              <th className="py-4 px-6 border-r-2 border-pink-300 text-center">Blue</th>
+              <th className="py-4 px-6 border-r-2 border-pink-300 text-center">Difference</th>
+              <th className="py-4 px-6 text-center">Reset</th>
             </tr>
           </thead>
           <tbody>
             {players.map(({ id, name, red, blue }) => (
               <tr
                 key={id}
-                className="even:bg-cyan-100 odd:bg-yellow-100 hover:bg-yellow-300 transition-colors duration-200"
+                className="even:bg-green-50 odd:bg-pink-50 hover:bg-yellow-200 transition-colors duration-300 cursor-pointer"
               >
-                <td className="border border-green-400 p-3">
+                <td className="border-r-2 border-pink-300 p-3">
                   <input
                     type="text"
                     value={name}
                     onChange={(e) => updateName(id, e.target.value)}
-                    className="w-full border-2 border-green-400 rounded-md px-2 py-1 text-lg font-semibold text-green-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    className="w-full bg-pink-50 rounded-md px-3 py-2 text-lg text-pink-800 font-semibold focus:outline-none focus:ring-2 focus:ring-pink-400"
                     spellCheck={false}
                   />
                 </td>
-                <td className="border border-green-400 p-3 text-center space-x-1">
+                <td className="border-r-2 border-pink-300 p-3 text-center space-x-2">
                   <button
                     onClick={() => updateScore(id, "red", -1)}
-                    className="bg-red-600 hover:bg-red-700 text-white rounded-md px-3 py-1 font-bold select-none"
+                    className="bg-red-500 hover:bg-red-700 text-white rounded-full px-4 py-1 text-xl font-bold select-none shadow-md transition"
                     aria-label={`Decrease red score for ${name}`}
                   >
                     −
                   </button>
-                  <span className="inline-block w-10 font-mono text-xl text-red-700 font-extrabold">
+                  <span className="inline-block w-12 font-mono text-2xl text-red-600 font-extrabold">
                     {red}
                   </span>
                   <button
                     onClick={() => updateScore(id, "red", 1)}
-                    className="bg-red-600 hover:bg-red-700 text-white rounded-md px-3 py-1 font-bold select-none"
+                    className="bg-red-500 hover:bg-red-700 text-white rounded-full px-4 py-1 text-xl font-bold select-none shadow-md transition"
                     aria-label={`Increase red score for ${name}`}
                   >
                     +
                   </button>
                 </td>
-                <td className="border border-green-400 p-3 text-center space-x-1">
+                <td className="border-r-2 border-pink-300 p-3 text-center space-x-2">
                   <button
                     onClick={() => updateScore(id, "blue", -1)}
-                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-md px-3 py-1 font-bold select-none"
+                    className="bg-blue-500 hover:bg-blue-700 text-white rounded-full px-4 py-1 text-xl font-bold select-none shadow-md transition"
                     aria-label={`Decrease blue score for ${name}`}
                   >
                     −
                   </button>
-                  <span className="inline-block w-10 font-mono text-xl text-blue-700 font-extrabold">
+                  <span className="inline-block w-12 font-mono text-2xl text-blue-600 font-extrabold">
                     {blue}
                   </span>
                   <button
                     onClick={() => updateScore(id, "blue", 1)}
-                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-md px-3 py-1 font-bold select-none"
+                    className="bg-blue-500 hover:bg-blue-700 text-white rounded-full px-4 py-1 text-xl font-bold select-none shadow-md transition"
                     aria-label={`Increase blue score for ${name}`}
                   >
                     +
                   </button>
                 </td>
-                <td className="border border-green-400 p-3 text-center font-mono font-extrabold text-green-900 text-xl">
+                <td className="border-r-2 border-pink-300 p-3 text-center font-mono font-extrabold text-xl text-pink-700">
                   {blue - red}
                 </td>
-                <td className="border border-green-400 p-3 text-center">
+                <td className="p-3 text-center">
                   <button
                     onClick={() => resetScores(id)}
-                    className="bg-yellow-400 hover:bg-yellow-500 text-green-900 font-bold rounded-md px-4 py-1 select-none transition-colors duration-200"
+                    className="bg-yellow-400 hover:bg-yellow-500 text-pink-900 font-bold rounded-md px-5 py-2 select-none shadow-md transition"
                     aria-label={`Reset scores for ${name}`}
                   >
                     Reset
