@@ -31,7 +31,7 @@ A colorful and interactive scoreboard built with React and Next.js for tracking 
 
    ```bash
    git clone https://github.com/akunna1/IG-Automatic-Quiz-Grader.git
-   cd IG-Automatic-Quiz-Grader
+   cd ig-grader
    ```
 
 2. **Install dependencies**
