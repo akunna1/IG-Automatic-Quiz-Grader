@@ -1,6 +1,6 @@
-# Instagram Quiz Scoreboard 🎉
+# Instagram Quiz Grader 🎉
 
-A colorful and interactive scoreboard built with React and Next.js for tracking my Instagram quiz scores. Designed with a playful Cocomelon-inspired theme to keep it fun and engaging while being fully functional and responsive.
+A colorful and interactive automatic quiz grader built with React and Next.js for tracking my Instagram quiz scores. Designed with a playful Cocomelon-inspired theme to keep it fun and engaging while being fully functional and responsive.
 
 ---
 
